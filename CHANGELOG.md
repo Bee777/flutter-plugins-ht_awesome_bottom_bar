@@ -1,7 +1,7 @@
 ## 1.2.5
 * Add svg asset support
 * Fixed: key duplicates for widget
-* 
+  
 ## 1.2.4
 * Fixed value in widget inspired
 * Fixed: top of floating creative no click
