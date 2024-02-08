@@ -167,6 +167,7 @@ class _BottomBarSalomonState extends State<BottomBarSalomon> with TickerProvider
                   padding: const EdgeInsets.only(right: 24, left: 20),
                   child: BuildIcon(
                     item: item,
+                    isSelected: isSelected,
                     iconColor: itemColor,
                     iconSize: widget.iconSize,
                     countStyle: countStyle,
@@ -177,6 +178,7 @@ class _BottomBarSalomonState extends State<BottomBarSalomon> with TickerProvider
             if (item.title is String && item.title != '') ...[
               BuildIcon(
                 item: item,
+                isSelected: isSelected,
                 iconColor: itemColor,
                 iconSize: widget.iconSize,
                 countStyle: countStyle,

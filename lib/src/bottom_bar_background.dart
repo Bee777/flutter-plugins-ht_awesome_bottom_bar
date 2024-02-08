@@ -101,15 +101,15 @@ class _BottomBarBackgroundState extends State<BottomBarBackground> with TickerPr
       return AnimatedBuilder(
         animation: _animationList[index],
         builder: (context, child) {
-          return buildContentItem(item, _animationList[index].value ?? Colors.black);
+          return buildContentItem(item, isSelected, _animationList[index].value ?? Colors.black);
         },
       );
     }
     Color itemColor = isSelected ? widget.colorSelected : widget.color;
-    return buildContentItem(item, itemColor);
+    return buildContentItem(item, isSelected, itemColor);
   }
 
-  Widget buildContentItem(TabItem item, Color color) {
+  Widget buildContentItem(TabItem item, bool isSelected, Color color) {
     double bottom = MediaQuery.of(context).viewPadding.bottom;
     EdgeInsets padDefault = EdgeInsets.only(
       top: widget.top!,
@@ -125,6 +125,7 @@ class _BottomBarBackgroundState extends State<BottomBarBackground> with TickerPr
           BuildIcon(
             item: item,
             iconColor: color,
+            isSelected: isSelected,
             iconSize: widget.iconSize,
             countStyle: widget.countStyle,
           ),

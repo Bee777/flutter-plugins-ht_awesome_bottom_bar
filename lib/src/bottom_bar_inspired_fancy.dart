@@ -136,11 +136,11 @@ class _BottomBarInspiredFancyState extends State<BottomBarInspiredFancy> with Ti
           AnimatedBuilder(
             animation: _animationList[index],
             builder: (context, child) {
-              return buildItemContent(item, active ? widget.colorSelected : widget.color, padding);
+              return buildItemContent(item, active, active ? widget.colorSelected : widget.color, padding);
             },
           )
         else
-          buildItemContent(item, active ? widget.colorSelected : widget.color, padding),
+          buildItemContent(item, active, active ? widget.colorSelected : widget.color, padding),
         Positioned(
           left: 0,
           right: 0,
@@ -164,7 +164,7 @@ class _BottomBarInspiredFancyState extends State<BottomBarInspiredFancy> with Ti
     );
   }
 
-  Widget buildItemContent(TabItem item, Color color, EdgeInsetsGeometry padding) {
+  Widget buildItemContent(TabItem item, bool isSelected, Color color, EdgeInsetsGeometry padding) {
     return Container(
       width: double.infinity,
       padding: padding,
@@ -174,6 +174,7 @@ class _BottomBarInspiredFancyState extends State<BottomBarInspiredFancy> with Ti
         children: <Widget>[
           BuildIcon(
             item: item,
+            isSelected: isSelected,
             iconColor: color,
             iconSize: widget.iconSize,
             countStyle: widget.countStyle,

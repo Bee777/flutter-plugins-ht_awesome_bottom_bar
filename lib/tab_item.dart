@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TabItem<T> {
-  final T icon;
+import 'widgets/icon_wrapper.dart';
+
+typedef WidgetIconBuilder = Widget Function(
+    BuildContext context, Color? color, double iconSize);
+
+class TabItem {
+  final IconWrapper icon;
+
   final String? title;
   final Widget? count;
   final String? key;
@@ -11,5 +17,5 @@ class TabItem<T> {
     this.title,
     this.count,
     this.key,
-  }) : assert(icon is IconData || icon is Widget, 'TabItem only support IconData and Widget');
+  });
 }

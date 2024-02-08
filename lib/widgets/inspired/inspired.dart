@@ -62,7 +62,7 @@ class Inspired extends StatefulWidget {
   final double? sizeInside;
   final Duration? duration;
   final String animateStyle;
-  final List<TabItem<dynamic>> items;
+  final List<TabItem> items;
   const Inspired({
     Key? key,
     required this.background,
@@ -329,18 +329,18 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
             duration: widget.duration ?? const Duration(milliseconds: 350),
             height: 80,
             curve: widget.curve,
-            bottomChild: buildContentItem(item, itemColor(), widget.iconSize, widget.sizeInside!),
+            bottomChild: buildContentItem(item, active, itemColor(), widget.iconSize, widget.sizeInside!),
           );
         } else {
           return TransitionContainer.scale(
             data: index,
             duration: widget.duration ?? const Duration(milliseconds: 350),
             curve: widget.curve,
-            child: buildContentItem(item, itemColor(), widget.iconSize, widget.sizeInside!),
+            child: buildContentItem(item, active, itemColor(), widget.iconSize, widget.sizeInside!),
           );
         }
       }
-      return buildContentItem(item, itemColor(), widget.iconSize, widget.sizeInside!);
+      return buildContentItem(item, active, itemColor(), widget.iconSize, widget.sizeInside!);
     }
     return Container(
       padding: EdgeInsets.only(bottom: widget.padbottom!, top: widget.padTop!),
@@ -350,6 +350,7 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
         children: [
           BuildIcon(
             item: item,
+            isSelected: active,
             iconColor: itemColor(),
             iconSize: widget.iconSize,
             countStyle: widget.countStyle,
@@ -367,7 +368,7 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
     );
   }
 
-  Widget buildContentItem(TabItem item, Color itemColor, double iconSize, double sizeInside) {
+  Widget buildContentItem(TabItem item, bool isSelected, Color itemColor, double iconSize, double sizeInside) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -380,6 +381,7 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
             alignment: Alignment.center,
             child: BuildIcon(
               item: item,
+              isSelected: isSelected,
               iconColor: widget.fixed ? widget.colorSelected : itemColor,
               iconSize: iconSize,
               countStyle: widget.countStyle,
@@ -393,6 +395,7 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
             color: widget.chipStyle?.background ?? Colors.blue,
             child: BuildIcon(
               item: item,
+              isSelected: isSelected,
               iconColor: widget.fixed ? widget.colorSelected : itemColor,
               iconSize: iconSize,
               countStyle: widget.countStyle,

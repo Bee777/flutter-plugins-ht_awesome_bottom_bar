@@ -178,6 +178,7 @@ class _BottomBarCreativeState extends State<BottomBarCreative> {
         children: [
           BuildIcon(
             item: item,
+            isSelected: isSelected,
             iconColor: itemColor,
             iconSize: widget.iconSize,
             countStyle: countStyle,
@@ -212,6 +213,7 @@ class _BottomBarCreativeState extends State<BottomBarCreative> {
         elevation: widget.highlightStyle?.elevation ?? 0,
         child: BuildIcon(
           item: item,
+          isSelected: true,
           iconColor: colorIcon,
           iconSize: 22,
           countStyle: countStyle,
@@ -230,6 +232,7 @@ class _BottomBarCreativeState extends State<BottomBarCreative> {
         alignment: Alignment.center,
         child: BuildIcon(
           item: item,
+          isSelected: true,
           iconColor: colorIcon,
           iconSize: 22,
           countStyle: countStyle,

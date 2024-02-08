@@ -159,6 +159,7 @@ class _BottomBarDividerState extends State<BottomBarDivider> {
         children: [
           BuildIcon(
             item: item,
+            isSelected: isSelected,
             iconColor: itemColor,
             iconSize: widget.iconSize,
             countStyle: countStyle,
