@@ -1,4 +1,4 @@
-import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
+import 'package:ht_awesome_bottom_bar/widgets/inspired/inspired.dart';
 import 'package:flutter/material.dart';
 import '../chip_style.dart';
 import '../count_style.dart';

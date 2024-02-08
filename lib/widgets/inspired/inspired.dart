@@ -15,10 +15,10 @@
  */
 
 
-import 'package:awesome_bottom_bar/count_style.dart';
-import 'package:awesome_bottom_bar/tab_item.dart';
-import 'package:awesome_bottom_bar/widgets/build_icon.dart';
-import 'package:awesome_bottom_bar/widgets/hexagon/hexagon.dart';
+import 'package:ht_awesome_bottom_bar/count_style.dart';
+import 'package:ht_awesome_bottom_bar/tab_item.dart';
+import 'package:ht_awesome_bottom_bar/widgets/build_icon.dart';
+import 'package:ht_awesome_bottom_bar/widgets/hexagon/hexagon.dart';
 
 import '../../chip_style.dart';
 import 'package:flutter/material.dart';

@@ -1,7 +1,7 @@
-import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
-import 'package:awesome_bottom_bar/extension/shadow.dart';
-import 'package:awesome_bottom_bar/src/bottom_bar.dart';
-import 'package:awesome_bottom_bar/widgets/build_icon.dart';
+import 'package:ht_awesome_bottom_bar/ht_awesome_bottom_bar.dart';
+import 'package:ht_awesome_bottom_bar/extension/shadow.dart';
+import 'package:ht_awesome_bottom_bar/src/bottom_bar.dart';
+import 'package:ht_awesome_bottom_bar/widgets/build_icon.dart';
 import 'package:flutter/material.dart';
 
 class BottomBarSalomon extends StatefulWidget {

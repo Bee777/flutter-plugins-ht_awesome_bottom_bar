@@ -1,6 +1,6 @@
-import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
+import 'package:ht_awesome_bottom_bar/widgets/inspired/inspired.dart';
 import 'package:flutter/material.dart';
-import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
+import 'package:ht_awesome_bottom_bar/ht_awesome_bottom_bar.dart';
 
 class OutSide extends StatefulWidget {
   static const String routeName = '/product';

@@ -1,8 +1,8 @@
-# Awesome Bottom Bar
+# Awesome Bottom Bar Extended Version
 
-![Awesome Bottom Bar](gifs/app_cirilla.gif)
+![Awesome Bottom Bar Extended](gifs/app_cirilla.gif)
 
-## the app uses awesome bottom bar
+## the app uses awesome bottom bar extended
 
 | IOS  | Android |
 | ------------- | ------------- |
@@ -53,26 +53,26 @@ In your flutter project add the dependency:
 
 ```yaml
 dependencies:
-  awesome_bottom_bar: any
+  ht_awesome_bottom_bar: any
 ```
 
 Import the package:
 
 ```dart
-import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
-import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
+import 'package:ht_awesome_bottom_bar/ht_awesome_bottom_bar.dart';
+import 'package:ht_awesome_bottom_bar/widgets/inspired/inspired.dart';
 ```
 
 Example
 
 ```dart
-import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
+import 'package:ht_awesome_bottom_bar/widgets/inspired/inspired.dart';
 import 'package:example/bottom_bar_creative.dart';
 import 'package:example/bottom_bar_default.dart';
 import 'package:example/bottom_bar_fancy.dart';
 import 'package:example/bottom_bar_salomon.dart';
 import 'package:flutter/material.dart';
-import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
+import 'package:ht_awesome_bottom_bar/ht_awesome_bottom_bar.dart';
 
 const List<TabItem> items = [
   TabItem(
@@ -438,12 +438,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 ```
-For better understanding, refer to the [example project](https://github.com/AppCheap/awesome_drawer_bar/tree/master/example) in the official git repo.
+For better understanding, refer to the [example project](https://github.com/Bee777/flutter-plugins-ht_awesome_bottom_bar/tree/master/example) in the official git repo.
 
 ## Issues
 
-Please file any issues, bugs or feature request as an issue on our [GitHub](https://github.com/AppCheap/awesome_bottom_bar/issues) page.
+Please file any issues, bugs or feature request as an issue on our [GitHub](https://github.com/Bee777/flutter-plugins-ht_awesome_bottom_bar/issues) page.
 
 ## Want to contribute
 
-If you would like to contribute to the plugin (e.g. by improving the documentation, solving a bug or adding a cool new feature), please carefully review our [contribution guide](CONTRIBUTING.md) and send us your [pull request](https://github.com/AppCheap/awesome_bottom_bar/pulls).
+If you would like to contribute to the plugin (e.g. by improving the documentation, solving a bug or adding a cool new feature), please carefully review our [contribution guide](CONTRIBUTING.md) and send us your [pull request](https://github.com/Bee777/flutter-plugins-ht_awesome_bottom_bar/pulls).

@@ -1,4 +1,4 @@
-library awesome_bottom_bar;
+library ht_awesome_bottom_bar;
 
 export 'tab_item.dart';
 export 'count_style.dart';

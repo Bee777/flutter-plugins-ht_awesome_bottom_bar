@@ -1,8 +1,7 @@
-name: awesome_bottom_bar
-description: Awesome Bottom Bar
-version: 1.2.4
-homepage: https://appcheap.io
-repository: https://github.com/AppCheap/awesome_bottom_bar
+name: ht_awesome_bottom_bar
+description: Awesome Bottom Bar Extended
+version: 1.2.5
+repository: https://github.com/Bee777/flutter-plugins-ht_awesome_bottom_bar
 
 environment:
   sdk: ">=2.15.1 <4.0.0"
@@ -15,7 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: ^3.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
