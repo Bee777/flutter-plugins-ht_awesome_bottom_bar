@@ -187,10 +187,10 @@ class _BottomBarFloatingState extends State<BottomBarFloating> with TickerProvid
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: List.generate(widget.items.length, (index) {
-                  String value = widget.items[index].key ?? '';
+                  String? value = widget.items[index].key;
                   return Expanded(
                     child: InkWell(
-                      key: Key(value),
+                      key: value != null ? Key(value) : null,
                       onTap: index != _selectedIndex!
                           ? () {
                               if (index != _selectedIndex) {

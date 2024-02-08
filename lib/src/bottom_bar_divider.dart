@@ -95,10 +95,10 @@ class _BottomBarDividerState extends State<BottomBarDivider> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: List.generate(widget.items.length, (index) {
-                        String value = widget.items[index].key ?? '';
+                        String? value = widget.items[index].key;
                         return Expanded(
                           child: InkWell(
-                            key: Key(value),
+                            key: value != null ? Key(value) : null,
                             onTap: () => widget.onTap?.call(index),
                             child: widget.items.length > index
                                 ? SizedBox(

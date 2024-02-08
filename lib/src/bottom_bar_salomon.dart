@@ -77,9 +77,9 @@ class _BottomBarSalomonState extends State<BottomBarSalomon> with TickerProvider
                 children: List.generate(
                   widget.items.length,
                   (index) {
-                    String value = widget.items[index].key ?? '';
+                    String? value = widget.items[index].key;
                     return GestureDetector(
-                      key: Key(value),
+                      key: value != null ? Key(value): null,
                       onTap: index != widget.indexSelected ? () => widget.onTap?.call(index) : null,
                       child: widget.items.length > index
                           ? buildItem(
