@@ -19,6 +19,12 @@ const List<TabItem> items = [
     // title: 'Home',
   ),
   TabItem(
+    icon: SizedBox(
+      child: Icon(Icons.category, color: Colors.white54),
+    ),
+    title: 'Custom',
+  ),
+  TabItem(
     icon: Icons.search_sharp,
     title: 'Shop',
   ),
@@ -68,10 +74,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int visit = 0;
   double height = 30;
-  Color colorSelect =const Color(0XFF0686F8);
+  Color colorSelect = const Color(0XFF0686F8);
   Color color = const Color(0XFF7AC0FF);
   Color color2 = const Color(0XFF96B1FD);
-  Color bgColor = const  Color(0XFF1752FE);
+  Color bgColor = const Color(0XFF1752FE);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       drawer: Drawer(
           child: ListView(
-        padding:const EdgeInsets.only(left: 16),
+        padding: const EdgeInsets.only(left: 16),
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
@@ -130,7 +137,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(
                   builder: (context) => const OutSide(
                     items: items,
-                    chipStyle: ChipStyle(notchSmoothness: NotchSmoothness.sharpEdge),
+                    chipStyle:
+                        ChipStyle(notchSmoothness: NotchSmoothness.sharpEdge),
                   ),
                 ),
               );
@@ -159,7 +167,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   builder: (context) => const OutSide(
                     items: items,
                     style: ItemStyle.circle,
-                    chipStyle: ChipStyle(notchSmoothness: NotchSmoothness.verySmoothEdge),
+                    chipStyle: ChipStyle(
+                        notchSmoothness: NotchSmoothness.verySmoothEdge),
                   ),
                 ),
               );
@@ -174,7 +183,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   builder: (context) => const OutSide(
                     items: items,
                     style: ItemStyle.circle,
-                    chipStyle: ChipStyle(notchSmoothness: NotchSmoothness.smoothEdge),
+                    chipStyle:
+                        ChipStyle(notchSmoothness: NotchSmoothness.smoothEdge),
                   ),
                 ),
               );
@@ -189,7 +199,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   builder: (context) => const OutSide(
                     items: items,
                     style: ItemStyle.circle,
-                    chipStyle: ChipStyle(notchSmoothness: NotchSmoothness.softEdge),
+                    chipStyle:
+                        ChipStyle(notchSmoothness: NotchSmoothness.softEdge),
                   ),
                 ),
               );
@@ -361,7 +372,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ) // Populate the Drawer in the next step.
           ),
       body: SingleChildScrollView(
-        padding:const EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
             SizedBox(height: height),
@@ -377,7 +388,7 @@ class _MyHomePageState extends State<MyHomePage> {
               top: -25,
               animated: true,
               itemStyle: ItemStyle.hexagon,
-              chipStyle:const ChipStyle(drawHexagon: true),
+              chipStyle: const ChipStyle(drawHexagon: true),
             ),
             SizedBox(height: height),
             BottomBarInspiredOutside(
@@ -392,7 +403,8 @@ class _MyHomePageState extends State<MyHomePage> {
               top: -28,
               animated: false,
               itemStyle: ItemStyle.circle,
-              chipStyle:const ChipStyle(notchSmoothness: NotchSmoothness.sharpEdge),
+              chipStyle:
+                  const ChipStyle(notchSmoothness: NotchSmoothness.sharpEdge),
             ),
             SizedBox(height: height),
             BottomBarInspiredOutside(
@@ -407,7 +419,8 @@ class _MyHomePageState extends State<MyHomePage> {
               top: -28,
               animated: false,
               itemStyle: ItemStyle.circle,
-              chipStyle:const ChipStyle(notchSmoothness: NotchSmoothness.smoothEdge),
+              chipStyle:
+                  const ChipStyle(notchSmoothness: NotchSmoothness.smoothEdge),
             ),
             SizedBox(height: height),
             BottomBarInspiredOutside(
@@ -422,7 +435,8 @@ class _MyHomePageState extends State<MyHomePage> {
               top: -28,
               animated: false,
               itemStyle: ItemStyle.circle,
-              chipStyle:const ChipStyle(notchSmoothness: NotchSmoothness.verySmoothEdge),
+              chipStyle: const ChipStyle(
+                  notchSmoothness: NotchSmoothness.verySmoothEdge),
             ),
             SizedBox(height: height),
             BottomBarInspiredOutside(
@@ -448,7 +462,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: (int index) => setState(() {
                 visit = index;
               }),
-              chipStyle:const ChipStyle(convexBridge: true),
+              chipStyle: const ChipStyle(convexBridge: true),
               itemStyle: ItemStyle.circle,
               animated: false,
             ),
@@ -463,7 +477,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 visit = index;
               }),
               animated: false,
-              chipStyle:const ChipStyle(isHexagon: true, convexBridge: true),
+              chipStyle: const ChipStyle(isHexagon: true, convexBridge: true),
               itemStyle: ItemStyle.hexagon,
             ),
             BottomBarFloating(
@@ -494,7 +508,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: color,
               colorSelected: colorSelect,
               indexSelected: visit,
-              highlightStyle:const HighlightStyle(
+              highlightStyle: const HighlightStyle(
                 isHexagon: true,
               ),
               onTap: (int index) => setState(() {
@@ -521,7 +535,8 @@ class _MyHomePageState extends State<MyHomePage> {
               colorSelected: colorSelect,
               indexSelected: visit,
               isFloating: true,
-              highlightStyle:const HighlightStyle(sizeLarge: true, background: Colors.red, elevation: 3),
+              highlightStyle: const HighlightStyle(
+                  sizeLarge: true, background: Colors.red, elevation: 3),
               onTap: (int index) => setState(() {
                 visit = index;
               }),
@@ -534,7 +549,8 @@ class _MyHomePageState extends State<MyHomePage> {
               colorSelected: colorSelect,
               indexSelected: visit,
               isFloating: true,
-              highlightStyle:const HighlightStyle(sizeLarge: true, isHexagon: true, elevation: 2),
+              highlightStyle: const HighlightStyle(
+                  sizeLarge: true, isHexagon: true, elevation: 2),
               onTap: (int index) => setState(() {
                 visit = index;
               }),
@@ -580,7 +596,7 @@ class _MyHomePageState extends State<MyHomePage> {
               colorSelected: Colors.orange,
               onTap: (int index) => avoidPrint('$index'),
               blur: 50,
-              countStyle:const CountStyle(
+              countStyle: const CountStyle(
                 background: Colors.brown,
               ),
             ),
@@ -592,7 +608,7 @@ class _MyHomePageState extends State<MyHomePage> {
               colorSelected: Colors.orange,
               iconSize: 40,
               indexSelected: visit,
-              titleStyle:const TextStyle(fontSize: 18, color: Colors.black),
+              titleStyle: const TextStyle(fontSize: 18, color: Colors.black),
               onTap: (int index) => setState(() {
                 visit = index;
               }),
@@ -620,7 +636,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 visit = index;
               }),
               styleDivider: StyleDivider.bottom,
-              countStyle:const CountStyle(
+              countStyle: const CountStyle(
                 background: Colors.white,
                 color: Colors.purple,
               ),
@@ -642,7 +658,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       bottomNavigationBar: Container(
-        padding:const EdgeInsets.only(bottom: 30, right: 32, left: 32),
+        padding: const EdgeInsets.only(bottom: 30, right: 32, left: 32),
         child: BottomBarFloating(
           items: items,
           backgroundColor: Colors.green,

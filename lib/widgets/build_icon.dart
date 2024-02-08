@@ -19,22 +19,36 @@ class BuildIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget icon = Icon(
-      item.icon,
-      size: iconSize,
-      color: iconColor,
-    );
+    bool isIconData = item.icon is IconData;
+    Widget icon;
+
+    if (isIconData) {
+      icon = Icon(
+        item.icon,
+        size: iconSize,
+        color: iconColor,
+      );
+    } else {
+      icon = SizedBox(
+        child: item.icon,
+        width: iconSize,
+        height: iconSize,
+      );
+    }
+
     if (item.count is Widget) {
       double sizeBadge = countStyle?.size ?? 18;
 
       return Stack(
         clipBehavior: Clip.none,
         children: [
-          Icon(
-            item.icon,
-            size: iconSize,
-            color: iconColor,
-          ),
+          isIconData
+              ? Icon(
+                  item.icon,
+                  size: iconSize,
+                  color: iconColor,
+                )
+              : icon,
           PositionedDirectional(
             start: iconSize - sizeBadge / 2,
             top: -sizeBadge / 2,
@@ -43,6 +57,7 @@ class BuildIcon extends StatelessWidget {
         ],
       );
     }
+
     return icon;
   }
 }
