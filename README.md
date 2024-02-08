@@ -59,6 +59,7 @@ dependencies:
 Import the package:
 
 ```dart
+import 'package:ht_awesome_bottom_bar/widgets/icon_wrapper.dart';
 import 'package:ht_awesome_bottom_bar/ht_awesome_bottom_bar.dart';
 import 'package:ht_awesome_bottom_bar/widgets/inspired/inspired.dart';
 ```
@@ -66,6 +67,7 @@ import 'package:ht_awesome_bottom_bar/widgets/inspired/inspired.dart';
 Example
 
 ```dart
+import 'package:ht_awesome_bottom_bar/widgets/icon_wrapper.dart';
 import 'package:ht_awesome_bottom_bar/widgets/inspired/inspired.dart';
 import 'package:example/bottom_bar_creative.dart';
 import 'package:example/bottom_bar_default.dart';
@@ -76,23 +78,32 @@ import 'package:ht_awesome_bottom_bar/ht_awesome_bottom_bar.dart';
 
 const List<TabItem> items = [
   TabItem(
-    icon: Icons.home,
+    icon: IconDataWrapper(Icons.home),
     // title: 'Home',
   ),
   TabItem(
-    icon: Icons.search_sharp,
+    icon: SvgIconWrapper(
+      assetPath: "assets/svg/my_icon.svg",
+      activeAssetPath: "assets/svg/my_icon_fill.svg",
+      // blendMode: BlendMode.dstIn,
+      // useColorActive: true,
+    ),
+    title: 'Custom',
+  ),
+  TabItem(
+    icon: IconDataWrapper(Icons.search_sharp),
     title: 'Shop',
   ),
   TabItem(
-    icon: Icons.favorite_border,
+    icon: IconDataWrapper(Icons.favorite_border),
     title: 'Wishlist',
   ),
   TabItem(
-    icon: Icons.shopping_cart_outlined,
+    icon: IconDataWrapper(Icons.shopping_cart_outlined),
     title: 'Cart',
   ),
   TabItem(
-    icon: Icons.account_box,
+    icon: IconDataWrapper(Icons.account_box),
     title: 'profile',
   ),
 ];
